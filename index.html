@@ -5,9 +5,9 @@
 </svg>
 <script>
 xdomain = [0,42];
-xrange = [0,900];
+xrange = [0,500];
 ydomain = [0,7];
-yrange = [100,930];
+yrange = [100,630];
 cdomain = [0,42];
 crange = ["blue","orange"];
 
@@ -16,7 +16,7 @@ ys = d3.scaleLinear().domain(ydomain).range(yrange);
 cs = d3.scaleLinear().domain(cdomain).range(crange);
 d3.select('svg')
   .selectAll('rect')
-  .data([4,8,15,16,23,42,67])
+  .data([4,8,15,16,23,42])
   .enter()
   .append('rect')
     .attr('x',20)
