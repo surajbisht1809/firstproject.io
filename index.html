@@ -16,7 +16,7 @@ ys = d3.scaleLinear().domain(ydomain).range(yrange);
 cs = d3.scaleLinear().domain(cdomain).range(crange);
 d3.select('svg')
   .selectAll('rect')
-  .data([4,8,15,16,23,42])
+  .data([4,8,15,16,23,42,67])
   .enter()
   .append('rect')
     .attr('x',20)
