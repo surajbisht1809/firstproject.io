@@ -1,0 +1,29 @@
+<html>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<body>
+<svg width=900 height=1000>
+</svg>
+<script>
+xdomain = [0,42];
+xrange = [0,900];
+ydomain = [0,7];
+yrange = [100,930];
+cdomain = [0,42];
+crange = ["blue","orange"];
+
+xs = d3.scaleLinear().domain(xdomain).range(xrange);
+ys = d3.scaleLinear().domain(ydomain).range(yrange);
+cs = d3.scaleLinear().domain(cdomain).range(crange);
+d3.select('svg')
+  .selectAll('rect')
+  .data([4,8,15,16,23,42])
+  .enter()
+  .append('rect')
+    .attr('x',20)
+    .attr('y',function(d,i) {return ys(i);})
+    .attr('width',function(d,i) {return xs(d);})
+    .attr('height',20)
+    .style('fill',function(d,i) {return cs(d);});
+</script>
+</body>
+</html>
