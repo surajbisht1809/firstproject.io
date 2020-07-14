@@ -4,11 +4,11 @@
 <svg width=900 height=1000>
 </svg>
 <script>
-xdomain = [0,42];
+xdomain = [0,100];
 xrange = [0,500];
-ydomain = [0,7];
+ydomain = [0,8];
 yrange = [100,630];
-cdomain = [0,42];
+cdomain = [0,100];
 crange = ["blue","orange"];
 
 xs = d3.scaleLinear().domain(xdomain).range(xrange);
@@ -16,7 +16,7 @@ ys = d3.scaleLinear().domain(ydomain).range(yrange);
 cs = d3.scaleLinear().domain(cdomain).range(crange);
 d3.select('svg')
   .selectAll('rect')
-  .data([4,8,15,16,23,42])
+  .data([4,8,15,16,23,42,100])
   .enter()
   .append('rect')
     .attr('x',20)
